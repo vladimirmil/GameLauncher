@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://qeu31drke54a"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_akdoq"]
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_akdoq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/Panel"]
+layout_mode = 0
+offset_right = 1009.0
+offset_bottom = 31.0
+color = Color(0.105882, 0.105882, 0.105882, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 146.0
+offset_bottom = 31.0
+theme_override_constants/separation = 0
+
+[node name="Button" type="Button" parent="Control/Panel/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 10
+text = "Artowork folder"
+
+[node name="Button2" type="Button" parent="Control/Panel/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 10
+text = "Icon folder"
+
+[node name="Button3" type="Button" parent="Control/Panel/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 10
+text = "Refresh"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Control/Panel/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 16
+columns = 2

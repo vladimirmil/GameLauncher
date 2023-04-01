@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://oayj6e651y5v"]
+
+[ext_resource type="Script" path="res://game_button.gd" id="1_c1b27"]
+[ext_resource type="Texture2D" uid="uid://d01fxtc5mtdy2" path="res://Img/placeholder.jpg" id="1_js6j0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7g6c6"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="GameButton" type="VBoxContainer"]
+offset_right = 203.0
+offset_bottom = 122.0
+theme_override_constants/separation = 0
+script = ExtResource("1_c1b27")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7g6c6")
+text = "Game name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_js6j0")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+focus_mode = 0
+text = "Play"
